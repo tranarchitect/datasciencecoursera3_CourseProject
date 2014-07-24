@@ -10,8 +10,8 @@ Course Project for Getting and Cleaning Data
 5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject
 
 ## B. Script task explanation:
-*a. Read activity labels (./activity_labels.txt) to create the activity data table consisting of activity Code (1-6) and *equivalent activity labels
-*b. Read all 561 measurement features from (./features.txt)
+###a. Read activity labels (./activity_labels.txt) to create the activity data table consisting of activity Code (1-6) and equivalent activity labels
+###b. Read all 561 measurement features from (./features.txt)
 *c. Record the index of measurement features which are only relating to the mean or standard deviation values.
 *d. Use the index vector record to extract only 66 "mean/stdev"-type measurement features
 *e. Modify the descriptions of column names of measurement features (e.g. tBodyAcc-mean()-X become Time.BodyAcc.Mean.X)
