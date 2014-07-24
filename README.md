@@ -12,8 +12,8 @@ Course Project for Getting and Cleaning Data
 ## B. Script task explanation:
 ###a. Read activity labels (./activity_labels.txt) to create the activity data table consisting of activity Code (1-6) and equivalent activity labels
 ###b. Read all 561 measurement features from (./features.txt)
-*c. Record the index of measurement features which are only relating to the mean or standard deviation values.
-*d. Use the index vector record to extract only 66 "mean/stdev"-type measurement features
+* Record the index of measurement features which are only relating to the mean or standard deviation values.
+* Use the index vector record to extract only 66 "mean/stdev"-type measurement features
 *e. Modify the descriptions of column names of measurement features (e.g. tBodyAcc-mean()-X become Time.BodyAcc.Mean.X)
 *f. Merge two data sets including x_test (./test/x_test.txt) and x_train (./train/X_train.txt) in to a big data set with 561 measurement features
 *i. Using the record of "mean/stdev"-type measurement features to filter the merged data
