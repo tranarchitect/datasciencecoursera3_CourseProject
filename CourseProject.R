@@ -1,5 +1,6 @@
 ########## Course Project #########
-path <- "F:/UHM/Coursera/Data Science/3_Getting and Cleaning Data/Course Project/UCI HAR Dataset/"
+# uncommand the line below
+# path <- "directory where storing all data files (eg. "D:/Coursera/GettingCleaningData/CourseProject/UCI HAR Dataset/")
 setwd(path)
 
 # read activities
