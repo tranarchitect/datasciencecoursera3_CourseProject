@@ -9,8 +9,8 @@ Variables
 
 `activities` retrieved from `./activity_labels.txt` consists of activity code and activity labels:
 
- |Code 	 |Activity
- ---     |---
+Code |Activity
+ --- |---
 1|	WALKING
 2|	WALKING_UPSTAIRS
 3|	WALKING_DOWNSTAIRS
@@ -20,7 +20,7 @@ Variables
 
 `features` includes all measurement features retrieved from `./features.txt`
 
-'measurement.filtered' only includes measurement features relating to mean and standard deviation.
+`measurement.filtered` only includes measurement features relating to mean and standard deviation.
 
 `merged.data` is merge by row from `test.x` and `train.x`
 
@@ -33,7 +33,8 @@ Variables
 ```{r}
 testmelt <- melt(mergedDB, id.vars = c("Subject", "Activity"))
 ```
-tidyData is the required tidy data which list the average of each filtered feature measurement per subject and activity, using the following code:
+
+`tidyData` is the required tidy data which list the average of each filtered feature measurement per subject and activity, using the following code:
   
 You can also embed plots, for example:
 

@@ -58,7 +58,7 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 
 <p>This is the cook book for the Course Project of the Getting and Cleaning Data MOOC.</p>
 <p>Variables</p>
-<p><code>activities</code> consists of activity code and activity lables:</p>
+<p><code>activities</code> retrieved from <code>./activity_labels.txt</code> consists of activity code and activity labels:</p>
 <table>
 <thead>
 <tr class="header">
@@ -93,11 +93,15 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 </tr>
 </tbody>
 </table>
-<p>button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:</p>
-<p><code>{r} summary(cars)</code></p>
+<p><code>features</code> includes all measurement features retrieved from <code>./features.txt</code></p>
+<p>‘measurement.filtered’ only includes measurement features relating to mean and standard deviation.</p>
+<p><code>merged.data</code> is merge by row from <code>test.x</code> and <code>train.x</code></p>
+<p>’merged.subject<code>is merge by row from</code>test.subject<code>and</code>train.subject`</p>
+<p><code>mergedDB</code> is the merge by column from subject, descriptive activity labels and filtered merged data</p>
+<p><code>mergedDB</code> data is melted by using <code>melt</code> function from <code>reshape2</code> to melt all measurements at each <code>Subject</code> and <code>Activity</code> variable, using this code:</p>
+<p><code>{r} testmelt &lt;- melt(mergedDB, id.vars = c(&quot;Subject&quot;, &quot;Activity&quot;))</code> tidyData is the required tidy data which list the average of each filtered feature measurement per subject and activity, using the following code:</p>
 <p>You can also embed plots, for example:</p>
-<p><code>{r, echo=FALSE} plot(cars)</code></p>
-<p>Note that the <code>echo = FALSE</code> parameter was added to the code chunk to prevent printing of the R code that generated the plot.</p>
+<pre><code>tidyData &lt;- dcast(testmelt, Subject + Activity ~ variable, fun.aggregate = mean)</code></pre>
 
 
 </div>
