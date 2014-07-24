@@ -16,10 +16,10 @@ Course Project for Getting and Cleaning Data
 * Use the index vector record to extract only 66 "mean/stdev"-type measurement features
 * Modify the descriptions of column names of measurement features (e.g. tBodyAcc-mean()-X become Time.BodyAcc.Mean.X)
 * Merge two data sets including x_test (./test/x_test.txt) of 2947 observations and x_train (./train/X_train.txt) of 7352 observations into a big data set with 10299 observations and 561 measurement features. The outcome of this process is called merged data.
-* Using the record of "mean/stdev"-type measurement features to filter this merged data. The outcome of this proces is called filtered merged data.
+* Using the record of "mean/stdev"-type measurement features to filter this merged data. The outcome of this process is called filtered merged data.
 * Merge test subject data (./test/subject_test.txt) and train subject data (./train/subject_train.txt)
 * Merge test activity data (./test/y_test.txt) and activity data(/train/Y_train.txt)
 * Substitute the activity codes with the relevant descriptive activity labels 
-* Merge all three data sets: merged subject data, merged activity label data and filtered merged data.
-* Create tidy data set by data reshape, listing the average of 66 "mean/stdev"-type measurement data for each activity and subject
+* Merge all three data sets: merged subject data, merged activity label data and filtered merged data. THe outcome of this process is a data frame with 10299 observations and 68 variables.
+* Create tidy data set by data reshape, listing the average of 66 "mean/stdev"-type measurement data for each activity and subject. This tidy data have only 35 observations and 68 variables. 
 * Write down the tidy data to the hard disk
