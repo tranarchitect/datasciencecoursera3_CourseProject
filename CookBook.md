@@ -7,7 +7,7 @@ This is the cook book for the Course Project of the Getting and Cleaning Data MO
 
 Variables
 
-`activities` consists of activity code and activity lables:
+`activities` retrieved from `./activity_labels.txt` consists of activity code and activity labels:
 
  |Code 	 |Activity
  ---     |---
@@ -18,16 +18,25 @@ Variables
 5|	STANDING
 6|	LAYING
 
-button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+`features` includes all measurement features retrieved from `./features.txt`
+
+'measurement.filtered' only includes measurement features relating to mean and standard deviation.
+
+`merged.data` is merge by row from `test.x` and `train.x`
+
+'merged.subject` is merge by row from `test.subject` and `train.subject`
+
+`mergedDB` is the merge by column from subject, descriptive activity labels and filtered merged data
+
+`mergedDB` data is melted by using `melt` function from `reshape2` to melt all measurements at each `Subject` and `Activity` variable, using this code:
 
 ```{r}
-summary(cars)
+testmelt <- melt(mergedDB, id.vars = c("Subject", "Activity"))
 ```
-
+tidyData is the required tidy data which list the average of each filtered feature measurement per subject and activity, using the following code:
+  
 You can also embed plots, for example:
 
-```{r, echo=FALSE}
-plot(cars)
 ```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+tidyData <- dcast(testmelt, Subject + Activity ~ variable, fun.aggregate = mean)
+```
