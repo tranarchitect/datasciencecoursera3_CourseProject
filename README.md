@@ -1,5 +1,5 @@
 ================================================
-				  Coursera
+				  #Coursera
 Course Project for Getting and Cleaning Data
 ================================================
 ## A. Required tasks:
